@@ -1,0 +1,156 @@
+:root {
+  --font-size-base: 1.5rem;
+  --font-size-large: 2.25rem;
+
+  --font-family-ubuntu: 'Ubuntu', sans-serif;
+
+  --color-neutral-light: #ffffff;
+  --color-neutral-dark: #111111;
+  --color-neutral-gray: #767676;
+
+  --round: 4px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--color-neutral-light);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url(./background.jpg);
+  background-size: cover;
+  backdrop-filter: blur(5px) brightness(70%);
+  line-height: 1.6;
+  text-align: center;
+  font-size: var(--font-size-base);
+  font-family: --font-family-ubuntu;
+  color: var(--color-neutral-light);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: header main footer;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(50rem, 100% - 2rem);
+}
+
+.header {
+  grid-area: 'header';
+  padding: clamp(1rem, 2vw, 2rem) clamp(2rem, 2vw, 4rem);
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3.3vw, 4rem);
+}
+
+.icon {
+  width: 1.5rem;
+  fill: var(--color-neutral-gray);
+}
+.logo-icon {
+  width: 3rem;
+  fill: var(--color-neutral-light);
+}
+
+/* The switch - the box around the slider */
+.scale-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.scale-switch .scale-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.scale-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-neutral-light);
+  border-radius: var(--round);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.scale-slider:before {
+  position: absolute;
+  content: '';
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--color-neutral-gray);
+  border-radius: var(--round);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.scale-checkbox:checked + .scale-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.search-container {
+  flex: 1;
+  background-color: var(--color-neutral-light);
+  border-radius: var(--round);
+  display: flex;
+  align-items: center;
+  padding-inline: 1rem;
+  gap: 1rem;
+  max-width: 48rem;
+  height: 3.8rem;
+}
+
+.search-container > * {
+  height: 100%;
+}
+
+.search-input {
+  flex: 1;
+  outline: none;
+  border: none;
+  font-size: inherit;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.main {
+  grid-area: 'main';
+}
+
+.footer {
+  grid-area: 'footer';
+  color: var(--color-neutral-gray);
+  padding: 8px 4px;
+}
