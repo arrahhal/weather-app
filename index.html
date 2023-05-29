@@ -4,8 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="./script.js" defer></script>
     <title>Weather app</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <svg class="logo-icon" viewBox="0 0 24 24"><path d="M19.511 9.722a7.833 7.833 0 0 0-2.359-3.804l-.035.035.005-.042A7.81 7.81 0 0 0 4.418 9.722c.031-.013.066-.013.099-.023a5.643 5.643 0 0 0-.306 9.166l.006-.006-.006.024a5.612 5.612 0 0 0 3.407 1.134h4.321l.024.024h4.341a5.644 5.644 0 0 0 3.207-10.319zm-3.206 6.845h-4.341l-.006.006v-.031h-4.34c-.308 0-.611-.066-.892-.193l.002-.001a2.17 2.17 0 1 1 2.87-2.871l2.518-2.518a5.634 5.634 0 0 0-3.396-2.1c.018-.009.035-.024.05-.021a4.334 4.334 0 0 1 5.931-.451h.046a4.334 4.334 0 0 1 1.558 3.407v.433a2.17 2.17 0 1 1 0 4.34z"></path></svg>
+      <form class="search-container container">
+        <button class="search-btn">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>
+        </button>
+        <input type="search" class="search-input" name="search-input" id="search-input" />
+      </form>
+      <div class="scale-container">
+        <span>&#8451</span>
+      <label class="scale-switch">
+  <input class="scale-checkbox" type="checkbox">
+  <span class="scale-slider"></span>
+</label>
+        <span>&#8457</span>
+      </div>
+    </header>
+    <main class="main"></main>
+    <footer class="footer container">
+      <p>
+        Built by
+        <a href="https://github.com/rahhly/" target="_blank">Abdulrahman</a> |
+        <a href="https://github.com/rahhaly/weather-app/" target="_blank"
+          >Source code</a
+        >
+      </p>
+    </footer>
+  </body>
 </html>
