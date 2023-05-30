@@ -13,7 +13,10 @@ const weatherConditionIcon = document.getElementById('condition-icon');
 async function fetchWeather(location = 'Damascus') {
   try {
     const response = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=f76538fc0ebc49bbaed160752232705&q=${location}`
+      `https://api.weatherapi.com/v1/current.json?key=f76538fc0ebc49bbaed160752232705&q=${location}`,
+      {
+        mode: 'cors',
+      }
     );
     if (!response.ok) {
       throw new Error('Location not found');
